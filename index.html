@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<title>ラッキーマップ</title>
+</head><body>
+<h1>ラッキーマップ</h1>
+
+<script type="module" src="https://code4fukui.github.io/gsi-map/gsi-map.js"></script>
+
+<button id=btn>幸運を感じる</button> <a id=acity></a><br>
+<gsi-map id=gsimap x-center="E913881" mode="satellite"></gsi-map>
+
+<hr>
+Lib: <a href=https://github.com/code4fukui/gsi-map/>gsi-map</a><br>
+<a href=https://github.com/code4fukui/lucky-map>src on GitHub</a><br>
+
+<style>
+button {
+  margin-bottom: .5em;
+}
+gsi-map {
+  width: 100%;
+  height: 60vh;
+}
+a {
+  color: gray !important;
+}
+</style>
+
+<script type="module">
+import { CSV } from "https://code4fukui.github.io/CSV/CSV.js";
+
+const url = "https://code4fukui.github.io/localgovjp/localgovjp-utf8.csv";
+const data = await CSV.fetchJSON(url);
+
+const lucky = () => {
+  /*
+  const level = 8;
+  const lat = (Math.random() * 2 - 1) * 90;
+  const lng = (Math.random() * 2 - 1) * 180;
+  */
+  const level = 17;
+  const d = data[Math.floor(Math.random() * data.length)];
+  const lat = d.lat;
+  const lng = d.lng;
+  //console.log(d);
+  
+  acity.textContent = d.pref + " " + d.city;
+  acity.setAttribute("href", d.url);
+
+  gsimap.setCenter(lat, lng, level);
+};
+btn.onclick = lucky;
+lucky();
+</script>
