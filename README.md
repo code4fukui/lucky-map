@@ -1,5 +1,7 @@
 # lucky-map
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 A map application that displays random locations in Japan.
 
 ## Demo
@@ -10,7 +12,7 @@ https://code4fukui.github.io/lucky-map/
 - Provides a link to the location's city page
 
 ## Usage
-1. Click the "幸運を感じる" (Feel Lucky) button to generate a random location.
+1. Click the "Feel Lucky" button to generate a random location.
 2. The map will center on the randomly selected location, and the city name will be displayed.
 3. Click the city name to visit the location's page.
 
