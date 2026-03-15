@@ -1,9 +1,21 @@
 # lucky-map
 
-- https://code4fukui.github.io/lucky-map/
+A map application that displays random locations in Japan.
 
-## おかしなデータ発見
+## Demo
+https://code4fukui.github.io/lucky-map/
 
-- 燕市
-- 福島県 泉崎村
-- 山口県 和木町
+## Features
+- Displays a random location in Japan on a map
+- Provides a link to the location's city page
+
+## Usage
+1. Click the "幸運を感じる" (Feel Lucky) button to generate a random location.
+2. The map will center on the randomly selected location, and the city name will be displayed.
+3. Click the city name to visit the location's page.
+
+## Data / API
+The application uses the [localgovjp-utf8.csv](https://code4fukui.github.io/localgovjp/localgovjp-utf8.csv) dataset, which contains information about local governments in Japan.
+
+## License
+This project is licensed under the MIT License.
