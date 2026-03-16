@@ -20,4 +20,4 @@ https://code4fukui.github.io/lucky-map/
 The application uses the [localgovjp-utf8.csv](https://code4fukui.github.io/localgovjp/localgovjp-utf8.csv) dataset, which contains information about local governments in Japan.
 
 ## License
-This project is licensed under the MIT License.
+MIT License — see [LICENSE](LICENSE).
